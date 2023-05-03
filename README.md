@@ -27,5 +27,7 @@ Get the entire contents of this repository on a machine:
 Edit the etc/sshwatch file to fill in:
 - HOSTNAME = YOUR.HOSTNAME.HERE
 -RECEIVER=YOUR.ADMINEMAIL.HERE
+
 Then move it to "/etc/"
+
 Move sshwatch.py to "/usr/local/bin"
