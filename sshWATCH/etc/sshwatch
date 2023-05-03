@@ -1,0 +1,13 @@
+[DEFAULT]
+HOSTNAME = YOUR.HOSTNAME.HERE
+[LOGGING]
+LOG_READ =  /var/log/auth.log
+LOG_WRITE = /var/log/sshwatch.log
+[MAIL]
+RECEIVER = YOUR.ADMINEMAIL.HERE
+SUBJECT = f'New login detected for {username}'
+BODY = message
+[PATTERN]
+LOGIN_PASSWORD = .*\ssshd.*\sAccepted\spassword\s\w*\s(\S+)\s\w*\s(\S+).*
+LOGIN_PUBLICKEY = .*\ssshd.*\sAccepted\spublickey\s\w*\s(\S+)\s\w*\s(\S+)\s\w*\s\d*\s\w*\d\D\s\w*\s(\S+)
+DISCONNECT_PATTERN = .*\s(\S+)\ssshd.*\sDisconnected\s\w*\s\w*\s(\S+)\s(\S+)\s.*
